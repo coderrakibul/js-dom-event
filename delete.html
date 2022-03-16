@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete</title>
+</head>
+<body>
+
+    
+    <section>
+        <p id="secret-info">delete your comment</p>
+        <input id="delete-confirm" type="text" placeholder="please type delete">
+        <button id="delete-btn" disabled>delete</button>
+    </section>
+
+    <script>
+        document.getElementById("delete-btn").addEventListener("click", function(){
+            document.getElementById("secret-info").style.display = 'none';
+        });
+        document.getElementById("delete-confirm").addEventListener("focus", function(){
+            
+        })
+    </script>
+</body>
+</html>

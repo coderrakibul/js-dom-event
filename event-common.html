@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>common event</title>
+  </head>
+  <body>
+    <p id="clicking-method"></p>
+    <input id="name-field" type="text" />
+    <button id="update-button">update</button>
+
+
+    <button onclick="handleButton()">just function</button>
+    <button id="handle-event">direct add event listerner</button>
+
+    <script>
+      function handleButton() {
+        const clickingMethod = document.getElementById("clicking-method");
+        clickingMethod.innerText = "set by function";
+      }
+    </script>
+
+    <script>
+      document.getElementById("handle-event").addEventListener("click", function () {
+        const clickMethod = document.getElementById("clicking-method");
+        clickMethod.innerText = "this is add by add event";
+      });
+    </script>
+
+    <script>
+     document.getElementById("update-button").addEventListener("click", function(){
+         const nameField = document.getElementById("name-field");
+         const store = document.getElementById("clicking-method");
+         store.innerText = nameField.value;
+         nameField.value = "";
+     })
+    </script>
+  </body>
+</html>
